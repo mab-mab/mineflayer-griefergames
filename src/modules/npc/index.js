@@ -20,8 +20,10 @@ module.exports = function load(bot, ns) {
 
     ns.npc.getWindow = (npc, npcEntity) => {
         bot.activateEntity(npcEntity)
-        return new Promise(res => {
-            bot.once(npc.onInteract, res)
+        return bot.getActionResult({
+            patternHead: 'npc',
+            successEvents: ['windowOpen:händler'],
+            failureEvents: []
         })
     }
 }
