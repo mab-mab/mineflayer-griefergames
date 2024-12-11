@@ -4,6 +4,10 @@ const v = require('vec3')
 module.exports = function load(bot, ns) {
     ns.npc = {}
 
+    ns.npc.warpTo = (npc) => {
+        return bot.chat('/warp  $1' + npc.world)
+    }
+
     ns.npc.travelNear = (npc, proximity = 3) => {
         const npcBlockPosition = v(npc.position).offset(0.5, 1, 0.5)
         return bot.pathfinder.goto(new GoalNear(npcBlockPosition.x, npcBlockPosition.y, npcBlockPosition.z, proximity))
