@@ -5,7 +5,7 @@ module.exports = function load(bot, ns) {
         return bot.pattern.item.findMatching(window)
     }
 
-    ns.orsb.tryToOpen = (traderEntity) => {
+    ns.orbs.tryToOpen = (traderEntity) => {
         bot.activateEntity(traderEntity)
         return bot.getActionResult({
             patternHead: 'orbs',
