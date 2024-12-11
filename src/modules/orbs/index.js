@@ -1,11 +1,11 @@
 module.exports = function load(bot, ns) {
     const orbs = ns['orbs'].data
 
-    ns.orbs.trader.getBalance = (window) => {
-        return bot.pattern.item.findMatching(window, orbss.itemPatterns.orbBalance)
+    ns.orbs.getBalance = (window) => {
+        return bot.pattern.item.findMatching(window)
     }
 
-    ns.orb.trader.getItemSellWindow = (window, itemName) => {
+    ns.orbs.getItemSellWindow = (window, itemName) => {
         return ns.window.clickFallible({
             window,
             slot: window.slots.items().find(item => item.name === itemName).slot,
@@ -16,8 +16,8 @@ module.exports = function load(bot, ns) {
         })
     }
 
-    ns.orbs.trader.sellItem = (window, quantityOption = 2) => {
-        const sellOptions = bot.pattern.item.findMatching(window, orbss.itemPatterns.sellOption)
+    ns.orbs.sellItem = (window, quantityOption = 2) => {
+        const sellOptions = bot.pattern.item.findMatching(window)
         return ns.window.clickFallible({
             window,
             slot: sellOptions[quantityOption],
