@@ -3,7 +3,7 @@ module.exports = {
         success: /^\[Orbs\] Du hast erfolgreich ([\d\.,]+) \S+ für ([\d\.,]+) Orbs verkauft\.$/,
     },
     windowPatterns: {
-        orbsMenu: /^Händler$/
+        orbsMenu: /^§6Händler$/
     },
     npc: {
         identifier: 'Händler',

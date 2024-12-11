@@ -22,7 +22,7 @@ module.exports = function load(bot, ns) {
         bot.activateEntity(npcEntity)
         return bot.getActionResult({
             patternHead: 'npc',
-            successEvents: ['windowOpen:händler'],
+            successEvents: [npc.onInteract],
             failureEvents: []
         })
     }
