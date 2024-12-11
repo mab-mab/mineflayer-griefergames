@@ -9,6 +9,6 @@ module.exports = {
         identifier: 'Händler',
         position: [172, 25, -42],
         world: 'orbs',
-        onInteract: 'windowOpen:orbs->orbsMenu',
+        onInteract: 'windowOpen:orbsMenu',
     }
 }
