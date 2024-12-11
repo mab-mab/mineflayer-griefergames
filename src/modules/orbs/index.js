@@ -5,6 +5,15 @@ module.exports = function load(bot, ns) {
         return bot.pattern.item.findMatching(window)
     }
 
+    ns.orsb.tryToOpen = (traderEntity) => {
+        bot.activateEntity(traderEntity)
+        return bot.getActionResult({
+            patternHead: 'orbs',
+            successEvents: ["windowOpen:trader"],
+            failureEvents: []
+        })
+    }
+
     ns.orbs.getItemSellWindow = (window, itemName) => {
         return ns.window.clickFallible({
             window,
