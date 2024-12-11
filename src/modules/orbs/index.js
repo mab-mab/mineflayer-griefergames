@@ -1,7 +1,7 @@
 module.exports = function load(bot, ns) {
     const orbs = ns['orbs'].data
 
-    ns.orb.trader.getBalance = (window) => {
+    ns.orbs.trader.getBalance = (window) => {
         return bot.pattern.item.findMatching(window, orbs.itemPatterns.orbBalance)
     }
 
@@ -16,7 +16,7 @@ module.exports = function load(bot, ns) {
         })
     }
 
-    ns.orb.trader.sellItem = (window, quantityOption = 2) => {
+    ns.orbs.trader.sellItem = (window, quantityOption = 2) => {
         const sellOptions = bot.pattern.item.findMatching(window, orbs.itemPatterns.sellOption)
         return ns.window.clickFallible({
             window,
