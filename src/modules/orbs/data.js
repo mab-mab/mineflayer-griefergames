@@ -1,9 +1,9 @@
 module.exports = {
     chatPatterns: {
-        success: /^\[Orbs\] Du hast erfolgreich ([\d\.,]+) \S+ für ([\d\.,]+) Orbs verkauuft\.$/,
+        success: /^\[Orbs\] Du hast erfolgreich ([\d\.,]+) \S+ für ([\d\.,]+) Orbs verkauft\.$/,
     },
     windowPatterns: {
-        orbsMenu: /^Trader$/
+        orbsMenu: /^Händler$/
     },
     npc: {
         identifier: 'Händler',
