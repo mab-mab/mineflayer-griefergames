@@ -11,5 +11,9 @@ module.exports = {
         identifier: 'Händler',
         position: [172, 25, -42],
         world: 'orbs'
+    },
+    itemPatterns: {
+        customName: '§6Deine Orbs'
+        
     }
 }

@@ -14,17 +14,6 @@ module.exports = function load(bot, ns) {
         })
     }
 
-    ns.orbs.getItemSellWindow = (window, itemName) => {
-        return bot.window.clickFallible({
-            window,
-            slot: window.slots.items().find(item => item.name === itemName).slot,
-            patternHead: 'orbTrader',
-            successEvent: 'sellItem',
-            currentWindowPatternName: 'menu',
-            timeout: 1000
-        })
-    }
-
     ns.orbs.sellItem = (window, quantityOption = 2) => {
         const sellOptions = bot.pattern.item.findMatching(window)
         return bot.window.clickFallible({
