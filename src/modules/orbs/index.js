@@ -15,7 +15,7 @@ module.exports = function load(bot, ns) {
     }
 
     ns.orbs.getItemSellWindow = (window, itemName) => {
-        return ns.window.clickFallible({
+        return bot.window.clickFallible({
             window,
             slot: window.slots.items().find(item => item.name === itemName).slot,
             patternHead: 'orbTrader',
@@ -27,7 +27,7 @@ module.exports = function load(bot, ns) {
 
     ns.orbs.sellItem = (window, quantityOption = 2) => {
         const sellOptions = bot.pattern.item.findMatching(window)
-        return ns.window.clickFallible({
+        return bot.window.clickFallible({
             window,
             slot: sellOptions[quantityOption],
             patternHead: 'orbTrader',
