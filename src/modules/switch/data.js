@@ -1,17 +1,17 @@
 module.exports = {
 	chatPatterns: {
-		loadedData: /^\[Switcher\] Daten heruntergeladen\!$/,
+		loadedData: /^\[GrieferGames\] Deine Daten wurden vollständig heruntergeladen\.$/,
 		serverFull: /^Der Server ist voll\. \[\d+\/\d+\]$/,
-		switchStarted: /^$GG Serverwechsel auf (.+) wurde gestartet\.+$/,
+		switchStarted: /^\[GrieferGames\] Serverwechsel auf (.+) wurde gestartet\.+$/,
 		switchFailed: /^Kicked whilst connecting to ([a-zA-Z0-9\-_]+): (.+)$/,
-		switchSucceeded: /^$GG Du wurdest automatisch auf ([a-zA-Z0-9\-_]+) verbunden\.$/,
+		switchSucceeded: /^\[GrieferGames\] Du wurdest automatisch auf ([a-zA-Z0-9\-_]+) verbunden\.$/,
 
 		maintenanceMode: /^Der Server ist gerade im Wartungsmodus\.$/,
 		timeout: /^Du kannst erst am ([\d\.]+) um ([\d:]+) wieder beitreten\./,
-		portalWarning: /^$GG Bitte warte 12 Sekunden zwischen jedem Teleport\.$/,
+		portalWarning: /^\[GrieferGames\] Bitte warte 12 Sekunden zwischen jedem Teleport\.$/,
 		lobbyConnectionAttempt: /^Versuche auf die Lobby zu verbinden\.$/,
 		portalroomConnectionAttempt: /^Versuche in den Portalraum zu verbinden\.$/,
-		portalroomJoin: /^$GG Du bist im Portalraum\. Wähle deinen Citybuild aus\.$/,
+		portalroomJoin: /^\[GrieferGames\] Du bist im Portalraum\. Wähle deinen Citybuild aus\.$/,
 		spamWarning: /^\[Switcher\] Daten werden noch heruntergeladen\. Bitte warte \.\.\.$/
 	},
 	commands: {

@@ -87,6 +87,8 @@ module.exports = function load(bot, ns) {
 		const targetServer = ns.switch.targetServer
 		if (!targetServer) return
 
+
+		// already on target server
 		if (ns.serverInfo.getTranslatedServer() === targetServer) {
 			ns.switch.targetServer = null
 			bot.pathfinder.setGoal(null)
@@ -164,5 +166,10 @@ module.exports = function load(bot, ns) {
 		ns.switch.targetServer = cb
 		ns.switch.navigate()
 		return once(bot, 'misc:switch->joinedTargetServer').then(() => once(bot, 'chat:switch->loadedData'))
+	}
+
+	ns.switch.switch = (cb) => {
+		ns.switch.toServer(cb)
+		return once(bot, 'chat:switch->loadedData')
 	}
 }
