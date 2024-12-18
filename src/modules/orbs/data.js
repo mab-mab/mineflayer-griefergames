@@ -13,7 +13,9 @@ module.exports = {
         world: 'orbs'
     },
     itemPatterns: {
-        customName: '§6Deine Orbs'
-        
+        orbBalance:{
+            name: 'skull', // The name of the item (a skull in this case)
+            customName: '§6Deine Orbs'     // The custom name you want to match (without color codes)
+        }
     }
 }
